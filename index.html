@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Ain Musfirah ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-rose: #f4d58d;
+            --soft-pink: #fff3cd;
+            --cream: #fffbf0;
+            --deep-rose: #d4a853;
+            --text-dark: #2d2424;
+            --gold: #d4af37;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Text', serif;
+            background: var(--cream);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* Confetti Animation */
+        .confetti-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: var(--primary-rose);
+            opacity: 0;
+            animation: confetti-fall 3s linear infinite;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* Floating Hearts */
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            opacity: 0;
+            animation: float-heart 6s ease-in-out infinite;
+        }
+
+        @keyframes float-heart {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            90% {
+                opacity: 0.3;
+            }
+            100% {
+                transform: translateY(-100vh) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Section Styling */
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        /* First Segment - Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--soft-pink) 0%, var(--cream) 50%, var(--soft-pink) 100%);
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 700;
+            color: var(--deep-rose);
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            line-height: 1.2;
+            animation: fadeInUp 1.5s ease-out 0.3s backwards;
+        }
+
+        .hero .name {
+            display: block;
+            color: var(--gold);
+            font-size: clamp(3rem, 10vw, 6.5rem);
+            margin: 10px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero .date {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            color: var(--deep-rose);
+            margin: 30px 0;
+            font-weight: 300;
+            animation: fadeInUp 1.5s ease-out 0.6s backwards;
+        }
+
+        .hero .quote {
+            font-family: 'Crimson Text', serif;
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-style: italic;
+            color: var(--text-dark);
+            max-width: 700px;
+            margin: 40px auto 0;
+            line-height: 1.8;
+            animation: fadeInUp 1.5s ease-out 0.9s backwards;
+        }
+
+        /* Second Segment - Letter */
+        .letter-section {
+            background: var(--cream);
+            padding: 100px 20px;
+        }
+
+        .letter-container {
+            max-width: 700px;
+            background: white;
+            padding: 60px;
+            border-radius: 2px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            position: relative;
+            border: 1px solid var(--soft-pink);
+        }
+
+        .letter-container::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, var(--primary-rose), var(--gold));
+            opacity: 0.1;
+            border-radius: 2px;
+            z-index: -1;
+        }
+
+        .letter-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--deep-rose);
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .letter-content {
+            font-size: 1.2rem;
+            line-height: 2;
+            color: var(--text-dark);
+        }
+
+        .letter-content p {
+            margin-bottom: 30px;
+        }
+
+        .signature {
+            text-align: right;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            margin-top: 50px;
+            color: var(--deep-rose);
+            font-style: italic;
+        }
+
+        /* Third Segment - Gallery */
+        .gallery-section {
+            background: linear-gradient(to bottom, var(--cream), var(--soft-pink));
+            padding: 100px 20px;
+        }
+
+        .gallery-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--deep-rose);
+            text-align: center;
+            margin-bottom: 80px;
+            font-weight: 600;
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 60px;
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .gallery-item {
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .gallery-item.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid var(--gold);
+            color: var(--deep-rose);
+            font-size: 2.5rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            padding: 0;
+        }
+
+        .carousel-btn:hover {
+            background: var(--gold);
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-btn.prev {
+            left: 0;
+        }
+
+        .carousel-btn.next {
+            right: 0;
+        }
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(212, 168, 83, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .indicator.active {
+            background: var(--gold);
+            transform: scale(1.3);
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            background: white;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 300px;
+            background: var(--soft-pink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--deep-rose);
+        }
+
+        .gallery-caption {
+            padding: 20px;
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            background: white;
+        }
+
+        /* Card Flip Game Section */
+        .game-section {
+            background: linear-gradient(135deg, var(--cream), var(--soft-pink));
+            padding: 100px 20px;
+        }
+
+        .game-container {
+            max-width: 1000px;
+            text-align: center;
+        }
+
+        .game-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--deep-rose);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .game-instruction {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 60px;
+            font-style: italic;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            perspective: 1000px;
+        }
+
+        .card {
+            aspect-ratio: 1;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .card.flipped .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .card-front {
+            background: linear-gradient(135deg, var(--primary-rose), var(--gold));
+            color: white;
+            font-size: 3rem;
+        }
+
+        .card-back {
+            background: white;
+            color: var(--text-dark);
+            transform: rotateY(180deg);
+            padding: 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: 3px solid var(--gold);
+        }
+
+        .completion-message {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.8s ease, opacity 0.8s ease, margin-top 0.8s ease;
+        }
+
+        .completion-message.show {
+            max-height: 1000px;
+            opacity: 1;
+            margin-top: 40px;
+        }
+
+        .message-content {
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            border: 3px solid var(--gold);
+            animation: celebrationPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes celebrationPulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            }
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 25px 70px rgba(212, 175, 55, 0.4);
+            }
+        }
+
+        .message-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .wholesome-message {
+            font-size: 1.3rem;
+            line-height: 2;
+            color: var(--text-dark);
+            animation: fadeInUp 1s ease-out 0.3s backwards;
+        }
+
+        /* Fourth Segment - Doa */
+        .doa-section {
+            background: var(--cream);
+            padding: 100px 20px;
+        }
+
+        .doa-container {
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .doa-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--deep-rose);
+            margin-bottom: 60px;
+            font-weight: 600;
+        }
+
+        .doa-content {
+            font-size: 1.3rem;
+            line-height: 2.2;
+            color: var(--text-dark);
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 2px solid var(--primary-rose);
+        }
+
+        .doa-content p {
+            margin-bottom: 25px;
+        }
+
+        /* Fifth Segment - Video */
+        .video-section {
+            background: linear-gradient(135deg, var(--soft-pink), var(--primary-rose));
+            padding: 100px 20px;
+        }
+
+        .video-container {
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .video-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 60px;
+            font-weight: 600;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+        }
+
+        .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--deep-rose);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            border-radius: 12px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: var(--cream);
+            text-align: center;
+            padding: 30px 20px;
+            font-family: 'Crimson Text', serif;
+            font-size: 1.1rem;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        /* Decorative Elements */
+        .ornament {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.3;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.5;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .letter-container {
+                padding: 40px 30px;
+            }
+
+            .carousel-container {
+                padding: 0 50px;
+            }
+
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 2rem;
+            }
+
+            .cards-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+            }
+
+            .message-content {
+                padding: 30px 20px;
+            }
+
+            .game-title, .gallery-title, .doa-title, .video-title {
+                font-size: 2.5rem;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+        }
+
+        /* Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Confetti Container -->
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <!-- First Segment: Hero -->
+    <section class="hero">
+        <div class="ornament" style="top: 10%; left: 10%;">✨</div>
+        <div class="ornament" style="top: 20%; right: 15%;">💫</div>
+        <div class="ornament" style="bottom: 15%; left: 15%;">🌸</div>
+        <div class="ornament" style="bottom: 20%; right: 10%;">✨</div>
+        
+        <div class="hero-content">
+            <h1>
+                Happy Birthday<br>
+                <span class="name">Ain Musfirah</span>
+            </h1>
+            <div class="date">02 • 02 • 2026</div>
+            <p class="quote">
+                "On this day, the world was gifted someone who changed my life forever."
+            </p>
+        </div>
+    </section>
+
+    <!-- Second Segment: Letter -->
+    <section class="letter-section">
+        <div class="letter-container fade-in">
+            <h2 class="letter-title">A Letter For You</h2>
+            <div class="letter-content">
+                <p>My dearest Ain Musfirah,</p>
+                
+                <p>On this special day, I want you to know how deeply grateful I am for your existence. You are not just a part of my life you are the light that illuminates every corner of it, the warmth that makes every day worthwhile.</p>
+                
+                <p>Your patience has taught me the true meaning of understanding. In moments when I've been difficult, lost, or uncertain, you've stood by me with a grace that takes my breath away. Your love is gentle yet powerful, quiet yet profound, and it has transformed me in ways I never thought possible.</p>
+                
+                <p>Thank you for being exactly who you are for your kindness, your laughter, your strength, and your beautiful soul. Thank you for choosing to walk this journey with me, for believing in us even when the path wasn't clear.</p>
+                
+                <p>Every day with you is a gift I cherish. Today, as we celebrate you, I hope you feel even a fraction of the joy and love you bring into my life.</p>
+                
+                <p class="signature">Forever yours,<br>Your future Husband (Hazeeq)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Game: Flip Cards -->
+    <section class="game-section">
+        <div class="game-container fade-in">
+            <h2 class="game-title">Find the Hidden Messages 💛</h2>
+            <p class="game-instruction">Flip all the cards to reveal a special message for you!</p>
+            
+            <div class="cards-grid" id="cardsGrid">
+                <!-- Cards will be generated by JavaScript -->
+            </div>
+            
+            <div class="completion-message" id="completionMessage">
+                <div class="message-content">
+                    <h3>🌟 You Clicked Them All! 🌟</h3>
+                    <p class="wholesome-message">
+                        Just like how you patiently flipped each card, you've patiently loved me through every season of our journey together. Each moment with you is a beautiful discovery, a treasure I never want to stop uncovering. You are my greatest adventure, my sweetest surprise, and my forever blessing. Thank you for being the most wonderful person in my life. I love you more than words can say. 💛✨
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Third Segment: Gallery -->
+    <section class="gallery-section">
+        <div style="max-width: 1200px; width: 100%;">
+            <h2 class="gallery-title fade-in">Memories We've Made</h2>
+            
+            <div class="carousel-container">
+                <div class="carousel-wrapper" id="carouselWrapper">
+                    <div class="gallery-item active">
+                        <img src="img/firstdate.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="gallery-caption">Our first date together, where everything began</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/sunset.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="gallery-caption">That sunset we watched, lost in conversation</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/smile.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="gallery-caption">Your smile that makes everything better</div>
+                    </div>
+					<div class="gallery-item">
+                        <img src="img/hiking.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="gallery-caption">Our first hiking together</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/little.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="gallery-caption">The little moments that mean everything</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/building.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="gallery-caption">One step closer together</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/concert.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="gallery-caption">Forever grateful for memories like these</div>
+                    </div>
+					<div class="gallery-item">
+                        <img src="img/cute.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="gallery-caption">Cute smile</div>
+                    </div>
+					<div class="gallery-item">
+                        <img src="img/sleep.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="gallery-caption">Beauty in your sleep</div>
+                    </div>
+					<div class="gallery-item">
+                        <img src="img/goofy.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="gallery-caption">Love to see your goofy side</div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn prev" id="prevBtn">‹</button>
+                <button class="carousel-btn next" id="nextBtn">›</button>
+                
+                <div class="carousel-indicators" id="carouselIndicators"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fourth Segment: Doa -->
+    <section class="doa-section">
+        <div class="doa-container fade-in">
+            <h2 class="doa-title">Doa For You</h2>
+            <div class="doa-content">
+                <p>On this new chapter of your life, I pray for you with all my heart.</p>
+                
+                <p>May Allah SWT grant you a year filled with barakah, where every step you take is guided by His light and protected by His mercy.</p>
+                
+                <p>May He bless you with unwavering health strength in your body, clarity in your mind, and tranquility in your soul.</p>
+                
+                <p>May peace surround you always, shielding you from all worries and filling your heart with contentment and serenity.</p>
+                
+                <p>May happiness bloom in every moment of your days, and may you find joy in both the grand celebrations and the quiet, simple pleasures of life.</p>
+                
+                <p>May all your dreams be fulfilled in ways more beautiful than you've ever imagined, and may your path be illuminated with success, love, and endless blessings.</p>
+                
+                <p><strong>Ameen, Ya Rabbal Alamin.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Created with 💛 by Your Future Husband (Hazeeq)</p>
+    </footer>
+
+    <script>
+        // Card messages
+        const cardMessages = [
+            "You are my sunshine ☀️",
+            "Beautiful inside & out 🌸",
+            "You complete me 💫",
+            "Forever grateful 🙏",
+            "My heart belongs to you ❤️",
+            "You make life magical ✨",
+            "My greatest blessing 🌟",
+            "Together forever 💍"
+        ];
+
+        // Create cards
+        function createCards() {
+            const grid = document.getElementById('cardsGrid');
+            cardMessages.forEach((message, index) => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <span>?</span>
+                        </div>
+                        <div class="card-back">
+                            ${message}
+                        </div>
+                    </div>
+                `;
+                card.addEventListener('click', () => flipCard(card));
+                grid.appendChild(card);
+            });
+        }
+
+        // Flip card function
+        function flipCard(card) {
+            if (!card.classList.contains('flipped')) {
+                card.classList.add('flipped');
+                checkCompletion();
+            }
+        }
+
+        // Check if all cards are flipped
+        function checkCompletion() {
+            const allCards = document.querySelectorAll('.card');
+            const flippedCards = document.querySelectorAll('.card.flipped');
+            
+            if (allCards.length === flippedCards.length) {
+                setTimeout(() => {
+                    document.getElementById('completionMessage').classList.add('show');
+                    // Create celebration confetti
+                    createCelebrationConfetti();
+                }, 500);
+            }
+        }
+
+        // Extra confetti for celebration
+        function createCelebrationConfetti() {
+            const container = document.getElementById('confettiContainer');
+            const colors = ['#f4d58d', '#fff3cd', '#d4a853', '#d4af37', '#fff'];
+            
+            for (let i = 0; i < 100; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.animationDelay = '0s';
+                    confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                    container.appendChild(confetti);
+                    
+                    setTimeout(() => confetti.remove(), 5000);
+                }, i * 30);
+            }
+        }
+
+        // Initialize cards
+        createCards();
+
+        // Carousel Functionality
+        let currentSlide = 0;
+        let autoPlayInterval;
+        const slides = document.querySelectorAll('.gallery-item');
+        const indicatorsContainer = document.getElementById('carouselIndicators');
+
+        // Create indicators
+        slides.forEach((_, index) => {
+            const indicator = document.createElement('div');
+            indicator.className = `indicator ${index === 0 ? 'active' : ''}`;
+            indicator.addEventListener('click', () => goToSlide(index));
+            indicatorsContainer.appendChild(indicator);
+        });
+
+        const indicators = document.querySelectorAll('.indicator');
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+
+            currentSlide = (n + slides.length) % slides.length;
+            
+            slides[currentSlide].classList.add('active');
+            indicators[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        function goToSlide(n) {
+            showSlide(n);
+            resetAutoPlay();
+        }
+
+        function resetAutoPlay() {
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = setInterval(nextSlide, 4000); // 4 seconds
+        }
+
+        // Event listeners for carousel buttons
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            nextSlide();
+            resetAutoPlay();
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            prevSlide();
+            resetAutoPlay();
+        });
+
+        // Start auto-play
+        autoPlayInterval = setInterval(nextSlide, 4000); // 4 seconds
+
+        // Confetti Animation
+        function createConfetti() {
+            const container = document.getElementById('confettiContainer');
+            const colors = ['#e8b4b8', '#f5d7d9', '#c97a80', '#d4af37', '#fff'];
+            
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.animationDelay = Math.random() * 3 + 's';
+                    confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                    container.appendChild(confetti);
+                    
+                    setTimeout(() => confetti.remove(), 5000);
+                }, i * 100);
+            }
+        }
+
+        // Floating Hearts
+        function createHeart() {
+            const container = document.getElementById('confettiContainer');
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '💖';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDelay = Math.random() * 3 + 's';
+            heart.style.animationDuration = (Math.random() * 3 + 5) + 's';
+            container.appendChild(heart);
+            
+            setTimeout(() => heart.remove(), 8000);
+        }
+
+        // Initial animations
+        createConfetti();
+        setInterval(createConfetti, 8000);
+        
+        setInterval(createHeart, 2000);
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Remove video placeholder when video is loaded
+        const video = document.querySelector('video');
+        if (video) {
+            video.addEventListener('loadeddata', () => {
+                const placeholder = document.querySelector('.video-placeholder');
+                if (placeholder) placeholder.style.display = 'none';
+            });
+        }
+    </script>
+</body>
+</html>
